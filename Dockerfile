@@ -14,7 +14,7 @@ ENV LANG="en_US.UTF-8"
 RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get update \
     && apt-get -yq upgrade \
-    && apt-get -yq install language-pack-zh-hans locales tzdata sudo apt-utils build-essential cmake exuberant-ctags ccache tmux \
+    && apt-get -yq install locales tzdata sudo apt-utils build-essential language-pack-zh-hans cmake exuberant-ctags ccache tmux \
     && localedef -i zh_CN -c -f UTF-8 -A /usr/share/locale/locale.alias zh_CN.UTF-8 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
